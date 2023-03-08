@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 /scripting.blend
 /scripting.blend1
+/addons/
+/startup/
