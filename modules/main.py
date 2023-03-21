@@ -31,11 +31,11 @@ def cubeTest() -> None:
 
 
 def main():
-    ClearScene()
+    clearScene()
 
     # cubeTest()
-    #vector_creator.make_two_point_edge(Point(0, 0, 0), Point(0, 2, 2))
-    vector_creator.make_path_from_points((Point(0, 0, 0), Point(0, 2, 2), Point(0, 3, 5), Point(2,4,2)))
+    vector_creator.two_point_edge(Point(0, 0, 0), Point(0, 2, 5))
+    vector_creator.path_from_points((Point(0, 0, 0), Point(0, 2, 2), Point(0, 3, 5), Point(2,4,2)))
 
 
 main()
