@@ -3,7 +3,6 @@ import math
 
 import os
 import sys
-
 dir_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(dir_path)
 
@@ -32,10 +31,11 @@ def cubeTest() -> None:
 
 
 def main():
-    clearScene()
+    ClearScene()
 
     # cubeTest()
-    vector_creator.makeTwoPointEdge(Point(0, 0, 0), Point(0, 2, 2))
+    #vector_creator.make_two_point_edge(Point(0, 0, 0), Point(0, 2, 2))
+    vector_creator.make_path_from_points((Point(0, 0, 0), Point(0, 2, 2), Point(0, 3, 5), Point(2,4,2)))
 
 
 main()
