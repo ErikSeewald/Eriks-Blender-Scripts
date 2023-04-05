@@ -6,9 +6,10 @@ import sys
 dir_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(dir_path)
 
-import vector_creator
 import cube_creator
-from e_point import Point
+from ebs_point import Point
+from ebs_path import Path
+import ebs_util
 
 
 
@@ -31,11 +32,12 @@ def cubeTest() -> None:
 
 
 def main():
+            
+    ebs_util.object_mode()
     clearScene()
-
-    # cubeTest()
-    vector_creator.two_point_edge(Point(0, 0, 0), Point(0, 2, 5))
-    vector_creator.path_from_points((Point(0, 0, 0), Point(0, 2, 2), Point(0, 3, 5), Point(2,4,2)))
+    
+    path = Path((Point(0, 0, 0), Point(0, 2, 2), Point(0, 3, 5), Point(2,4,2)))
+    path.add_volume(0.1)
 
 
 main()
