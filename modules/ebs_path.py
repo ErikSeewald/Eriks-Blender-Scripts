@@ -66,18 +66,18 @@ class Path:
         
         vec = Vector() # vector (second to last) -> (last point)
         for i in range(3):
-            vec[i] = self.obj.data.vertices[len(self.points) -2].co[i] - point.co[i]
+            vec[i] = point.co[i] - self.obj.data.vertices[len(self.points) -2].co[i]
 
         # CONE OBJECT
         bpy.ops.mesh.primitive_cone_add(vertices=32, depth=2.0, location=point.co)
         cone = bpy.context.object
         cone.name = "Arrow"
-        
-        # ROTATION, SCALE
-        cone.rotation_mode = "QUATERNION"
-        cone.rotation_quaternion = vec.to_track_quat("-Z", "Z")
-        
         cone.scale = (thickness, thickness, thickness)
+        
+        # align Z axis of cone with vector (y axis as "up" for quat)
+        cone.rotation_mode = "QUATERNION"
+        cone.rotation_quaternion = vec.to_track_quat("Z", "Y")
+        
         
         # ADD TO PATH COLLECTION
         self.collection.objects.link(cone)
