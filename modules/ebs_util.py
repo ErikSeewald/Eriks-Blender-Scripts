@@ -8,7 +8,7 @@ def edit_mode() -> None:
     if bpy.context.object is not None and bpy.context.object.mode != "EDIT":
         bpy.ops.object.mode_set(mode="EDIT")
         
-def clearScene() -> None:
+def clear_scene() -> None:
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete()
     
