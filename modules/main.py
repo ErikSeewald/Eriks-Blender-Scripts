@@ -34,10 +34,10 @@ def cubeTest() -> None:
 def main():
             
     ebs_util.object_mode()
-    clearScene()
+    ebs_util.clearScene()
     
-    path = Path((Point(0, 0, 0), Point(0, 2, 2), Point(0, 3, 5), Point(2,4,2)))
-    path.add_volume(0.1)
-
+    path = Path((Point(0, 0, 0), Point(0, 2, 2), Point(1, 4, 4), Point(1,4,6)))
+    path.add_volume()
+    path.add_arrow()
 
 main()
