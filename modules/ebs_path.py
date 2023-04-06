@@ -74,8 +74,8 @@ class Path:
         cone.name = "Arrow"
         
         # ROTATION, SCALE
-        cone.rotation_mode = 'QUATERNION'
-        cone.rotation_quaternion = vec.to_track_quat('-Z', 'Y')
+        cone.rotation_mode = "QUATERNION"
+        cone.rotation_quaternion = vec.to_track_quat("-Z", "Z")
         
         cone.scale = (thickness, thickness, thickness)
         
