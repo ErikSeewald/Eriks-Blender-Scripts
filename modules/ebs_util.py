@@ -15,3 +15,9 @@ def clear_scene() -> None:
     for collection in bpy.data.collections[:]:
         collection.user_clear()
         bpy.data.collections.remove(collection, do_unlink=True)
+        
+    for mat in bpy.data.materials:
+        bpy.data.materials.remove(mat)
+
+    for mesh in bpy.data.meshes:
+        bpy.data.meshes.remove(mesh)
