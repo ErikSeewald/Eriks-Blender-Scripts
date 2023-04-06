@@ -1,7 +1,6 @@
 import bpy
 from ebs_point import Point
 import ebs_util
-import math
 from mathutils import Vector
 
 class Path:
